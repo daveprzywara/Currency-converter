@@ -1,0 +1,47 @@
+input {
+    width: 50px;
+    margin-top: 5px;
+}
+
+#transaction-name {
+    width: 110px;
+}
+
+button {
+    margin-top: 5px;
+}
+
+#calculation {
+    width: 160px;
+    float: left;
+}
+
+[id |="field"]{
+    padding: 5px;
+}
+
+#transactions {
+    margin-top: 40px;
+    width: 350px;
+    height: 500px;
+    border: 1px solid black;
+    overflow-y: scroll;
+    letter-spacing: 2px;
+}
+
+.transaction-box {
+    display: table;
+    margin: 8px auto;
+    width: 300px;
+    height: 40px;
+    border: 1px solid grey;
+    padding: 6px;
+}
+
+em {
+    float: right;
+    margin: auto;
+    color: grey;
+    cursor: pointer;
+    font-size: 12px;
+}
