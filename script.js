@@ -87,6 +87,7 @@ let initTransaction = () => {
 
 plnCurrency.addEventListener('input', function(event){
     deleteDivs();
+    plnCurrency.value = Math.round(plnCurrency.value * 100) / 100;
     transactionDict.plns =
     transactionDict.euros.map(a => Number((a*plnCurrency.value).toFixed(2)));
     createDiv();
