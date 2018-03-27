@@ -84,3 +84,11 @@ let initTransaction = () => {
         calculateTotal();
         clearValues();
 }
+
+plnCurrency.addEventListener('input', function(event){
+    deleteDivs();
+    transactionDict.plns =
+    transactionDict.euros.map(a => Number((a*plnCurrency.value).toFixed(2)));
+    createDiv();
+    calculateTotal();
+});
