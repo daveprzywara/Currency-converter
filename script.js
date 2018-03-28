@@ -87,9 +87,13 @@ let initTransaction = () => {
 
 plnCurrency.addEventListener('input', function(event){
     deleteDivs();
-    plnCurrency.value = Math.round(plnCurrency.value * 100) / 100;
+    plnCurrency.value = Math.round(Number(plnCurrency.value) * 100) / 100;
     transactionDict.plns =
     transactionDict.euros.map(a => Number((a*plnCurrency.value).toFixed(2)));
     createDiv();
     calculateTotal();
+});
+
+eurCurrency.addEventListener('input', function(event){
+    eurCurrency.value = Math.round(Number(eurCurrency.value) * 100) / 100;
 });
